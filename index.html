@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>난제를 푸는 LLM, 영재의 튜터가 될 수 있을까?</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/stage.css">
+  <link rel="stylesheet" href="css/slides.css">
+</head>
+<body>
+  <div id="viewport">
+    <div id="stage">
+      <canvas id="fluid"></canvas>
+      <div id="camera"><div id="world"></div></div>
+      <div id="hud"></div>
+      <div id="blackout"></div>
+    </div>
+  </div>
+  <div id="print-root"></div>
+
+  <div id="hands-dialog" class="dialog">
+    손을 든 사람 수
+    <input type="number" min="0" max="999" inputmode="numeric">
+    <small>Enter 저장 · Esc 취소 · 슬라이드 6에서는 + / − 로도 조정</small>
+  </div>
+  <div id="jump"></div>
+  <div id="help">
+    <table>
+      <tr><td>→ Space PageDown</td><td>다음 단계</td></tr>
+      <tr><td>← PageUp</td><td>이전 단계</td></tr>
+      <tr><td>Shift + → / ←</td><td>다음 / 이전 슬라이드로 건너뛰기</td></tr>
+      <tr><td>숫자 + Enter</td><td>슬라이드 번호로 이동</td></tr>
+      <tr><td>O</td><td>전체 지도 (슬라이드 클릭으로 이동)</td></tr>
+      <tr><td>P</td><td>발표자 창 열기</td></tr>
+      <tr><td>H</td><td>거수 인원 입력</td></tr>
+      <tr><td>B  .</td><td>암전</td></tr>
+      <tr><td>F</td><td>저사양 모드</td></tr>
+      <tr><td>L</td><td>밝은 테마</td></tr>
+      <tr><td>D</td><td>숨은 레이어 (슬라이드 12)</td></tr>
+      <tr><td>?</td><td>이 도움말</td></tr>
+    </table>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/fluid.js"></script>
+  <script src="js/slides/s01.js"></script>
+  <script src="js/slides/s02.js"></script>
+  <script src="js/slides/s03.js"></script>
+  <script src="js/slides/s04.js"></script>
+  <script src="js/slides/s05.js"></script>
+  <script src="js/slides/s06.js"></script>
+  <script src="js/slides/s07.js"></script>
+  <script src="js/slides/s08.js"></script>
+  <script src="js/slides/s09.js"></script>
+  <script src="js/slides/s10.js"></script>
+  <script src="js/slides/s11.js"></script>
+  <script src="js/slides/s12.js"></script>
+  <script src="js/slides/s13.js"></script>
+  <script src="js/slides/s14.js"></script>
+  <script>
+    (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(() => PPT.boot());
+  </script>
+</body>
+</html>

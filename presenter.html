@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>발표자 창</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--ink); font-family: var(--font); height: 100vh; display: grid; grid-template-columns: 1.25fr 1fr; gap: 20px; padding: 20px; word-break: keep-all; }
+    .col { display: flex; flex-direction: column; gap: 16px; min-height: 0; }
+    .card { background: var(--panel-solid); border: 1px solid var(--line); border-radius: 16px; padding: 18px 22px; }
+    .head { display: flex; align-items: baseline; gap: 14px; }
+    .head .n { font: 700 34px var(--mono); color: var(--ai); }
+    .head .t { font: 800 28px var(--font); }
+    .head .st { margin-left: auto; font: 600 18px var(--mono); color: var(--muted); }
+    .script { flex: 1; overflow: auto; }
+    .script p { font: 500 24px/1.6 var(--font); color: var(--muted); padding: 10px 14px; border-radius: 10px; margin-bottom: 6px; border-left: 4px solid transparent; }
+    .script p.cur { color: var(--ink); background: rgba(63,224,255,.08); border-left-color: var(--ai); }
+    .script p.past { opacity: .45; }
+    .script p .sn { font: 700 14px var(--mono); color: var(--ai); margin-right: 8px; vertical-align: 3px; }
+    .caution { font: 600 18px/1.5 var(--font); color: var(--human); border-color: var(--human); }
+    .timer { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; text-align: center; }
+    .timer .v { font: 700 40px var(--mono); }
+    .timer .l { font: 500 14px var(--font); color: var(--muted); margin-top: 2px; }
+    .timer .late { color: var(--del); } .timer .ok { color: var(--add); }
+    .prev { position: relative; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: #000; }
+    .prev iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; pointer-events: none; }
+    .lbl { font: 600 14px var(--mono); letter-spacing: .12em; color: var(--muted); margin-bottom: 8px; text-transform: uppercase; }
+    .next-t { font: 600 18px/1.5 var(--font); color: var(--ink-2); margin-top: 10px; }
+    .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+    button { font: 600 16px var(--font); color: var(--ink); background: var(--faint); border: 1px solid var(--line-strong); border-radius: 10px; padding: 10px 16px; cursor: pointer; }
+    button:hover { border-color: var(--ai); }
+    input { font: 700 26px var(--mono); width: 90px; color: var(--human); background: transparent; border: 0; border-bottom: 2px solid var(--human); outline: 0; }
+    details { font: 500 16px/1.55 var(--font); }
+    details summary { cursor: pointer; font-weight: 700; color: var(--ink-2); padding: 6px 0; }
+    details p { color: var(--ink-2); padding: 4px 0 10px 14px; }
+    .qa { overflow: auto; max-height: 30vh; }
+    .warn { color: var(--human); font: 600 16px var(--font); }
+  </style>
+</head>
+<body>
+  <div class="col">
+    <div class="card head"><span class="n" id="n">--</span><span class="t" id="title">연결 대기 중</span><span class="st" id="stepinfo"></span></div>
+    <div class="card script" id="script"><p class="warn">발표 화면(index.html)에서 P 키를 눌러 이 창을 여세요.</p></div>
+    <div class="card caution" id="caution" style="display:none"></div>
+  </div>
+  <div class="col">
+    <div class="card timer">
+      <div><div class="v" id="t-total">00:00</div><div class="l">총 경과 (목표 17:45)</div></div>
+      <div><div class="v" id="t-slide">00:00</div><div class="l" id="t-slide-l">이 슬라이드</div></div>
+      <div><div class="v" id="t-delta">±0:00</div><div class="l">누적 목표 대비</div></div>
+    </div>
+    <div class="card">
+      <div class="lbl">다음 화면</div>
+      <div class="prev"><iframe id="pv" src="index.html?preview=1&step=0" title="다음 화면 미리보기"></iframe></div>
+      <div class="next-t" id="next-t"></div>
+    </div>
+    <div class="card row">
+      <button id="b-prev">◀ 이전</button><button id="b-next">다음 ▶</button>
+      <button id="b-black">암전</button><button id="b-timer">타이머 재시작 (T)</button>
+      <span style="margin-left:auto">✋ <input id="hands" type="number" min="0" placeholder="–"></span>
+    </div>
+    <div class="card qa"><div class="lbl">예상 질문</div><div id="qa"></div></div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/presenter.js"></script>
+</body>
+</html>
