@@ -39,7 +39,7 @@
         AI가 아무리 똑똑해도,<br>그것을 <span class="ai">생각의 도구</span>로 쓰게 만드는 건<br><b>교사의 설계</b>다.
       </div>
       <div class="closing" data-s="3">
-        <div class="shift">AI를 <span class="not">답을 주는 기계</span>가 아니라 <b>생각을 단련하는 도구</b>로</div>
+        <div class="shift">AI를 <span class="not">정답 자판기</span>가 아니라 <b>생각을 단련하는 도구</b>로</div>
         <div class="thanks"><b>감사합니다</b><span>${PPT.DATA.presenter.dept} ${PPT.DATA.presenter.name}</span></div>
       </div>
     `,

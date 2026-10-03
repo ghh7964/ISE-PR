@@ -70,7 +70,7 @@ PPT.register({
         <div class="r warn"><span>학생 D</span><span class="sb"><i style="flex:0"></i><i style="flex:0"></i><i style="flex:0.001"></i></span><span class="flag">미사용 → 확인</span></div>
       </div>
       <div class="legend"><span><i style="background:var(--ink-2)"></i>내 답 검토</span><span><i style="background:var(--ai)"></i>배경지식</span><span><i style="background:var(--human)"></i>정답 요청</span></div>
-      <div class="quote">LLM은 교사를 대신하는 게 아니라,<br>교사가 <b>더 많은 학생을 깊게</b> 보게 하는 도구</div>
+      <div class="quote">AI는 교사를 대신하는 게 아니라,<br>교사가 <b>학생의 사고 과정을 더 깊이</b> 보게 하는 도구</div>
     </div>
   `,
   step(k, prev, ctx) {

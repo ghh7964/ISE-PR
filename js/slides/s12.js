@@ -36,7 +36,7 @@
         <div class="n">한계 3</div><h4>측정</h4>
         <p><b>사전검사 없음</b> — 출발선이 같았는지 모른다</p>
         <div class="startline"><i></i><b>?</b></div>
-        <p>영재라 이미 점수가 높아 차이가 드러나기 어려웠을 수도</p>
+        <p><b>천장 효과</b> — 이미 점수가 높아 차이가 드러나기 어려웠을 수도</p>
       </div>
       <div class="lim l4 panel" data-s="4">
         <div class="n">한계 4</div><h4>기간 · 운영</h4>

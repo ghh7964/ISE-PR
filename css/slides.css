@@ -304,6 +304,8 @@ em { font-style: normal; }
 .s08 .final { position: absolute; right: 140px; top: 850px; text-align: right; }
 .s08 .final .t { font: 800 50px var(--font); letter-spacing: -0.03em; }
 .s08 .final .g { font: 500 26px var(--font); color: var(--ink-2); margin-top: 8px; }
+.s08 .graders { position: absolute; left: 140px; top: 936px; font: 500 26px var(--font); color: var(--ink-2); }
+.s08 .graders b { color: var(--ink); }
 
 /* ================= S09 Dr. Smith ================= */
 .s09 .tags { position: absolute; left: 140px; top: 262px; display: flex; gap: 14px; }

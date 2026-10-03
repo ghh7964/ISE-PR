@@ -96,7 +96,7 @@
           <div class="cap">추론 모델 이후 상승 속도<br>1년에 6점 → 14점</div>
         </div>
       </div>
-      <div class="still" data-s="3"><b>2026년에만 ${recent.length}번</b> 최고 기록 갱신<small>이달에만 두 번 — 9월 1일, 9월 3일</small></div>
+      <div class="still" data-s="3"><b>2026년에만 ${recent.length}번</b> 최고 기록 갱신<small>9월에만 두 번 — 1일, 3일</small></div>
       <div class="src">Epoch AI · Epoch Capabilities Index — 50개+ 벤치마크 통합 · 각 시점 최고점 모델 · 2026.9.24 기준. 점선은 2024.9 이전 추세를 연장한 것</div>
     `,
     init(ctx) {

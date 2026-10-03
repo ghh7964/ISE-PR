@@ -33,9 +33,10 @@
         <span class="lab">루브릭</span>
         <span class="chip">진단 정확도</span><span class="chip">근거 제시</span><span class="chip">추가 질문</span>
       </div>
+      <div class="graders" data-s="3">채점 2명 — 강사 + <b>어느 반인지 모르는</b> 두 번째 강사</div>
       <div class="final" data-s="4">
         <div class="t">최종평가: AI 없이 혼자</div>
-        <div class="g">채점 2명 — 강사 + <b>어느 반인지 모르는</b> 두 번째 강사</div>
+        <div class="g">AI와 배운 것이 <b>내 실력으로 남았는지</b> 본다</div>
       </div>
     `,
     step(k, prev, ctx) {
